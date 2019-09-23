@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Disney Giphy</title>
-    <!--css link-->
-    <link rel="stylesheet" type="text/css" href="assets\css\style.css">
     <!--Bootstrap link-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!--JQuery link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--css link-->
+    <link rel="stylesheet" type="text/css" href="assets\css\style.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="row">
+<div class="container">      
+    <div class="row">
             <div class="col-lg-12 text-center">
                <div class="header">
                    <h1>DISNEY CHARACTERS GIFS</h1>
@@ -21,25 +22,24 @@
             </div>
         </div>
         <br>
-        <div class="gif-box">
-            <button id="disney"></button>
-        </div>
+       <div id="disney-characters"></div>
         
-        <div class="row">
-            <div class="col-lg-3 pull-right">
-                <form id="search-button">
-                    <p>Add your disney characters here</p>
-                    <input type="text" id="input" placeholder="">
+       <div class="row">
+             <div class="col-lg-3 pull-right">
+                 <form id="disney-form">
+                    <label for="disney-input">Add your disney characters here</label>
+                    <input type="text" id="disney-input" placeholder="">
                     <br><br>
-                    <input type="submit" id="submit-button" value="Submit">
-                </form>
-            </div>
+                    <input id="find-disneyCharacter"  type="submit" value="Submit">
+                 </form>
+             </div>
+        </div> 
+        <div class="row">
+            <div id="gifs-box"></div>
         </div>
     </div>
-    <!--JQuery link-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!--JS link-->   
-    <srcipt src="assets\js\giphy.js"></srcipt>
+
+<script src ="assets\javascript\giphy.js"></script>
 
 </body>
 </html>

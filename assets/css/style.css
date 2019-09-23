@@ -1,0 +1,7 @@
+body {
+    background-color: #fa8072;
+}
+
+div, form, input {
+    margin: 10px;
+}
