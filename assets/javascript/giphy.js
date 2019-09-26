@@ -2,34 +2,24 @@
 
     //Create a variables name topics and assigned with disney characters in string.
       var topic = ["cinderella", "goofy", "tinkerbell", "elsa", "ariel", "pooh", "belle", "simba"];
-     
-     
-      function renderButtons() {
+ 
+      renderButtons();
+     function renderButtons() {
               
         $("#disney-characters").empty();
         for (var i = 0; i < topic.length; i++) { 
          var a = $("<button>");
-          a.addClass("disney");
+          a.addClass("newCharacter");
           a.attr("data-name", topic[i]);
           a.text(topic[i]);
           $("#disney-characters").append(a);
       }
   }
-   
-      $("#find-disneyCharacter").on("click", function(event) {
-           event.preventDefault();
-
-          var disney = $("#disney-input").val().trim();
-           
-            topic.push(disney);
-           // console.log(topic);
-              renderButtons();  
-          });
-       renderButtons();
-     
-    $("button").on("click", function() {
-        var disneyCharacters = $(this).attr("data-name");
-           var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + disneyCharacters + "&api_key=iNztTxLueglvaGFJ6pTOQUtn4vLGftx6&limit=10";
+   //Adding click  event listen listener to all buttons
+  $("button").on("click", function(event) {
+      event.preventDefault();
+        var topic = $(this).attr("data-name");
+           var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=iNztTxLueglvaGFJ6pTOQUtn4vLGftx6&limit=10";
 
            console.log(queryURL);
         //Performing ajax request
@@ -46,25 +36,38 @@
              for (var i = 0; i < results.length; i++) {
                
                var gifDiv = $("<div>");
+               var p = $("<h5>").text("Rating: " + "" + rating);
 
               var rating = results[i].rating;
 
-               var p = $("<h3>").text("Rating: " + rating);
-
-               var disneyCharactersImage = $("<img>");
-                  disneyCharactersImage.attr("src", results[i].images.fixed_height.url);
-                
-                 
-                  gifDiv.prepend(p);
-                  gifDiv.prepend(disneyCharactersImage);
-                  $("#gifs-box").prepend(gifDiv);
-                } 
+              var disneyCharactersImage = $("<img>");
+                 disneyCharactersImage.attr("src", results[i].images.fixed_height_still.url);
+                 disneyCharactersImage.attr("data-still", results[i].images.fixed_height_still.url);
+                 disneyCharactersImage.attr("data-animate", results[i].images.fixed_height.url);
+                 //Appending the paragraph and image into gifDiv
+                 gifDiv.append(p);
+                 gifDiv.append(disneyCharactersImage);
+                 $("#gifs-box").prepend(gifDiv);
+            };
          });
-     });      
-         $("#gifs-box").on("click", function() {
-            var disneyCharactersGifs = $(this).attr("data-state");
+     });  
+
+     $("#find-disneyCharacter").on("click", function(event) {
+      event.preventDefault();
+
+      var newCharacter = $("#disney-input").val().trim();
+ 
+       topic.push(newCharacter);
+      // console.log(topic);
+        renderButtons();  
+      });
+
+      
+     
+        $("#gifs-box").on("click", "img", function() {
+            var state = $(this).attr("data-state");
             
-           if (disneyCharactersGifs === "still") {
+           if (state === "still") {
             $(this).attr("src", $(this).attr("data-animate"));
            $(this).attr("data-state", "animate");
            }
@@ -74,7 +77,8 @@
        
            }
       }); 
-});
+         
+ });
     
 
 
