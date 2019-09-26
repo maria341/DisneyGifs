@@ -2,6 +2,25 @@ body {
     background-color: #fa8072;
 }
 
-div, form, input {
-    margin: 10px;
+button, div, form, input {
+    margin: 5px;
 }
+
+h1 {
+    font-size: 60px;
+    font-display: "Georgia" serif;
+    font-style: italic;
+}
+
+button {
+    width: 80px;
+    color: black;
+    height: 50px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+image {
+    float: left;
+}
+
