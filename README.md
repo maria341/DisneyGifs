@@ -36,5 +36,5 @@ Only once you get images displaying with button presses should you move on to th
 
 # Example Picture Below
 
-![](https://github.com/maria341/DisneyGifs/blob/master/assets/images/screenshot.png)
+![](https://github.com/maria341/DisneyGifs/blob/master/assets/images/screenshot)
 
