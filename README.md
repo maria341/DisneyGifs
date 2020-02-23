@@ -1,5 +1,20 @@
+<<<<<<< HEAD
 Overview
 In this assignment, we use the GIPHY API to make a dynamic web page that populates with gifs of our choice. To finish this task, you must call the GIPHY API and use JavaScript and jQuery to change the HTML of your site.
+=======
+# Overview
+In this assignment, you'll use the GIPHY API to make a dynamic web page that populates with gifs of your choice. To finish this task, you must call the GIPHY API and use JavaScript and jQuery to change the HTML of your site.
+
+# Technology Used
+* HTML5
+* CSS3
+* Bootstrap
+* JQuery
+* Javascript
+* Giphy API
+
+# DisneyGifs
+>>>>>>> f37928f7bd19a098058d343b7716818c4ccc97bb
 
 # Instruction
 
