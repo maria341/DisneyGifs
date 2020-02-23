@@ -9,9 +9,6 @@ In this assignment, you'll use the GIPHY API to make a dynamic web page that pop
 * Javascript
 * Giphy API
 
-# DisneyGifs
->>>>>>> f37928f7bd19a098058d343b7716818c4ccc97bb
-
 # Instruction
 
 1. create an array of strings, each one related to a topic that interests you. Save it to a variable called topics. I choose disney for my theme.
