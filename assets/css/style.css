@@ -1,5 +1,7 @@
 body {
     background-color: #fa8072;
+    margin: 0;
+    padding: 0;
 }
 
 button, div, form, input {
@@ -20,13 +22,26 @@ button {
     background-color: lightblue;
 }
 
-.footer {
+input[type=submit] {
+    background-color: lightblue;
+    width: 80px;
+    font-size: 15px;
+    font-family: Georgia, serif;
+}
+
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: lightblue;
+    text-align: center;  
+    height: 60px;
+}
+
+footer p {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 20px;
     color: black;
-    text-align: center;
-    height: 40px;
 }

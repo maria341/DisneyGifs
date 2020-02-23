@@ -57,7 +57,8 @@
 
        topics.push(topic);
      // console.log(topic);
-     renderButtons();  
+     renderButtons(); 
+     document.getElementById('disney-input').value=''; 
      });
    
      $(document).on('click', ".disney-btn", disneyCharacterInfo);
