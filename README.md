@@ -1,14 +1,6 @@
 # Overview
 This application is using the GIPHY API to make a dynamic web page that populates with gifs of your choice. To finish this task, you must call the GIPHY API and use JavaScript and jQuery to change the HTML of your site.
 
-# Technology Used
-* HTML5
-* CSS3
-* Bootstrap
-* JQuery
-* Javascript
-* Giphy API
-
 # Instruction
 
 1. create an array of strings, each one related to a topic that interests you. Save it to a variable called topics. I choose disney for my theme.
